@@ -1,0 +1,18 @@
+The solution involves explicitly targeting the `::before` pseudo-element on the nested `li` element using a more specific selector, ensuring that the desired styling is applied correctly.
+
+```css
+/* Correct CSS (bugSolution.css) */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "-";
+  margin-right: 5px;
+}
+```
+By explicitly targeting `ul li::before`, we override the specificity of the parent's `::before` selector and correctly style the nested list items.
